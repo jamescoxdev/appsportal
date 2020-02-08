@@ -1,0 +1,18 @@
+.loaderContainer4tiles { width: 50px; padding: 0px; margin: 0px auto; clear: both; }
+.loaderContainer4tiles:after, .loaderContainer4tiles:before { clear: both; }
+.square { height: 20px; width: 20px; margin: 2px; background-color: #000; float: left; transform-origin: 50% 50%; -webkit-animation:bounce 2s infinite ease-in-out; -moz-animation:bounce 2s infinite ease-in-out; -ms-animation:bounce 2s infinite ease-in-out; -o-animation:bounce 2s infinite ease-in-out; animation:bounce 2s infinite ease-in-out; }
+.s1 { @extend .square; background-color: #1abc9c; -webkit-animation-delay:-2s; -moz-animation-delay:-2s; -ms-animation-delay:-2s; -o-animation-delay:-2s; animation-delay:-2s; }
+.s2 { @extend .square; background-color: #f1c40f; -webkit-animation-delay:-1.8s; -moz-animation-delay:-1.8s; -ms-animation-delay:-1.8s; -o-animation-delay:-1.8s; animation-delay:-1.8s; }
+.s3 { @extend .square; background-color: #e74c3c; -webkit-animation-delay:-1s; -moz-animation-delay:-1s; -ms-animation-delay:-1s; -o-animation-delay:-1s; animation-delay:-1s; }
+.s4 { @extend .square; background-color: #3498db; -webkit-animation-delay:-0.4s; -moz-animation-delay:-0.4s; -ms-animation-delay:-0.4s; -o-animation-delay:-0.4s; animation-delay:-0.4s; }
+
+@-webkit-keyframes bounce {
+    0%,100%{-webkit-transform:scale(0)}
+    50%{-webkit-transform:scale(1)}
+} 
+
+@keyframes bounce {
+    0%, 
+    100% {transform:scale(0);-webkit-transform:scale(0);-moz-transform:scale(0);-ms-transform:scale(0);-o-transform:scale(0)}
+    50% {transform:scale(1);-webkit-transform:scale(1);-moz-transform:scale(1);-ms-transform:scale(1);-o-transform:scale(1)}
+}

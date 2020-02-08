@@ -1,0 +1,24 @@
+@mixin smoothAnim($prop, $time){
+    transition: $prop $time;
+    -webkit-transition: $prop $time;
+    -moz-transition: $prop $time;
+    -ms-transition: $prop $time;
+    -o-transition: $prop $time;
+}
+@mixin blur($blur, $important: false){
+    @if($important == true){
+        filter: blur($blur) !important;
+        -webkit-filter: blur($blur) !important;
+        -moz-filter: blur($blur) !important;
+        -ms-filter: blur($blur) !important;
+        -o-filter: blur($blur) !important;
+    } @else {
+        filter: blur($blur);
+        -webkit-filter: blur($blur);
+        -moz-filter: blur($blur);
+        -ms-filter: blur($blur);
+        -o-filter: blur($blur);
+    }
+}
+
+$primaryColor: #06a;

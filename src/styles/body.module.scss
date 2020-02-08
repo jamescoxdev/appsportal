@@ -1,0 +1,133 @@
+@import 'utils';
+
+.body {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: auto;
+    ul {
+        list-style: none;
+        width: calc(100% - 40px);
+        margin: 60px auto 0px;
+        position: relative;
+        li {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px;
+            position: relative;
+        }
+        span {
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-top: 5px;
+        }
+        img {
+            width: 80px;
+            height: 80px;
+        }
+        a {
+            text-decoration: none;
+            font-size: 1.15em;
+            color: #fff;
+            text-shadow: 0px 0px 1px rgba(0,0,0,0.5);
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        .itemEdit {
+            background-color: rgba(220,220,220,0.5);
+            border-radius: 6px;
+        }
+        button {
+            border: 1px solid #aaa;
+            background-color: rgba(255,255,255,0.9);
+            position: absolute;
+            border-radius: 1000px;
+            padding: 2px;
+            cursor: pointer;
+            @include smoothAnim(all,500ms);
+        }
+        .editBtn {
+            top: -15px;
+            right: 17px;
+            &:hover {
+                background-color: $primaryColor;
+                color: #fff;
+                border-color: $primaryColor;
+            }
+            &:active {
+                background-color: $primaryColor;
+                color: #fff;
+                border-color: $primaryColor;
+            }
+        }
+        .deleteBtn {
+            top: -15px;
+            right: -15px;
+            &:hover {
+                background-color: #a00;
+                color: #fff;
+                border-color: #a00;
+            }
+            &:active {
+                background-color: #a00;
+                color: #fff;
+                border-color: #a00;
+            }
+        }
+    }
+}
+.msgContainer {
+    position: absolute;
+    top: 45px;
+    text-align: center;
+    width: 100%;
+    .msg {
+        text-align: center;
+        color: #fff;
+        padding: 2px 10px;
+        background-color: #fa0;
+        border-radius: 4px;
+        display: inline;
+    }
+}
+.startMsg {
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    top: calc(50% - 100px);
+    left: calc(50% - 200px);
+    text-align: center;
+    color: #fff;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.5);
+    font-size: 2em;
+    button {
+        font-size: 0.6em;
+        height: 40px;
+        padding: 0px 20px;
+        border: 1px solid #aaa;
+        background-color: #fff;
+        cursor: pointer;
+        margin-top: 10px;
+        border-radius: 2px;
+        @include smoothAnim(all,500ms);
+        &:hover {
+            background-color: $primaryColor;
+            color: #fff;
+            border-color: #fff;
+        }
+        &:active {
+            color: #000;
+        }
+    }
+    svg {
+        float: left;
+        margin-right: 10px;
+    }
+}
